@@ -1,4 +1,3 @@
-//Update 1 Test
 /**
  * A program to carry on conversations with a human user.
  * This version:

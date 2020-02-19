@@ -12,7 +12,7 @@ import java.util.Random;
  * @author Laurie White
  * @version April 2012
  */
-public class Magpie5
+public class MagpieMain
 {
     /**
      * Get a default greeting

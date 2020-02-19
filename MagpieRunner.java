@@ -13,7 +13,7 @@ public class MagpieRunner
      */
     public static void main(String[] args)
     {
-        Magpie5 maggie = new Magpie5();
+        MagpieMain maggie = new MagpieMain();
 
         System.out.println (maggie.getGreeting());
         Scanner in = new Scanner (System.in);

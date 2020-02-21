@@ -2,17 +2,18 @@ import java.util.Random;
 
 public class MagpieMain
 {
-    private CreateAndOpen createAndOpen = new CreateAndOpen();
-    
-    
-    
+
+
+
+
     /**
      * Get a default greeting
      * @return a greeting
      */
     public String getGreeting()
     {
-        return "Hello! I am IntelliJ Bot! What questions about IntelliJ do you have today?";
+        return "Hello! I am IntelliJ Bot! What questions about IntelliJ do you have today?\n" +
+                "Respond 1 for error messages, 2 for files and folders, 3 for shortcuts, and 4 for creating and opening projects.\nYou can enter these numbers at any time to switch between them.";
     }
 
     /**
@@ -200,7 +201,7 @@ public class MagpieMain
      * @return the index of the first occurrence of goal in
      *         statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal,
+    public int findKeyword(String statement, String goal,
                             int startPos)
     {
         String phrase = statement.trim().toLowerCase();
@@ -256,7 +257,7 @@ public class MagpieMain
      * @param goal the string to search for
      * @return the index of the first occurrence of goal in statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal)
+    public int findKeyword(String statement, String goal)
     {
         return findKeyword (statement, goal, 0);
     }

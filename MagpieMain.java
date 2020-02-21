@@ -1,26 +1,18 @@
 import java.util.Random;
 
-/**
- * A program to carry on conversations with a human user.
- * This version:
- *<ul><li>
- * 		Uses advanced search for keywords 
- *</li><li>
- * 		Will transform statements as well as react to keywords
- *</li></ul>
- * This version uses an array to hold the default responses.
- * @author Laurie White
- * @version April 2012
- */
 public class MagpieMain
 {
+    private CreateAndOpen createAndOpen = new CreateAndOpen();
+    
+    
+    
     /**
      * Get a default greeting
      * @return a greeting
      */
     public String getGreeting()
     {
-        return "Hello, let's talk.";
+        return "Hello! I am IntelliJ Bot! What questions about IntelliJ do you have today?";
     }
 
     /**

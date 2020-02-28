@@ -1,62 +1,64 @@
-public class Introductions extends MagpieMain{
-public String Greetings(){
-        return"I will teach you how to start a project in IntelliJ"
-    }
-  public String Response(String x){
-        String response="";
-        if(x.length()==0){
-            response="say something please";
-        }
-        else if(findKeyword(x,"no")>0){
-            response="ok"
-        }
-    }
+import java.util.Random;
 
-    private int findKeyword(String statement, String goal,
-                            int startPos)
+public class Introductions{
+
+
+    public String getRandomGreeting()
     {
-        String phrase = statement.trim().toLowerCase();
-        goal = goal.toLowerCase();
+        Random r = new Random ();
+        return randomGreeting [r.nextInt(randomGreeting.length)];
+    }
 
-        // The only change to incorporate the startPos is in
-        // the line below
-        int psn = phrase.indexOf(goal, startPos);
+    public String [] randomGreeting = {"Interesting, tell me more",
+            "Hi! How are you?",
+            "How are you today?"
 
-        // Refinement--make sure the goal isn't part of a
-        // word
-        while (psn >= 0)
-        {
-            // Find the string of length 1 before and after
-            // the word
-            String before = " ", after = " ";
-            if (psn > 0)
-            {
-                before = phrase.substring(psn - 1, psn);
+    };
+
+    public void firstResponse(String statement){
+        boolean good = false;
+        for (int i = 0; i < goodResponses.length; i++) {
+            if ((goodResponses[i].contains(statement))) {
+                System.out.println("I'm glad you are feeling well!");
+                good = true;
+                break;
             }
-            if (psn + goal.length() < phrase.length())
-            {
-                after = phrase.substring(
-                        psn + goal.length(),
-                        psn + goal.length() + 1);
+        }
+        if (!good) {
+            for (int i = 0; i < badResponses.length; i++) {
+                if (statement.toLowerCase().contains(badResponses[i])) {
+                    System.out.println("I'm sorry you aren't feeling well today.");
+                    good = true;
+                    break;
+                }
             }
-
-            // If before and after aren't letters, we've
-            // found the word
-            if (((before.compareTo("a") < 0) || (before
-                    .compareTo("z") > 0)) // before is not a
-                    // letter
-                    && ((after.compareTo("a") < 0) || (after
-                    .compareTo("z") > 0)))
-            {
-                return psn;
+            if (!good) {
+                System.out.println("Hmm.");
             }
-
-            // The last position didn't work, so let's find
-            // the next, if there is one.
-            psn = phrase.indexOf(goal, psn + 1);
-
         }
 
-        return -1;
+
+
     }
+
+
+    private String[] goodResponses = {
+            "good",
+            "great",
+            "amazing",
+            "cool",
+            "well",
+            "excellent"
+    };
+
+    private String[] badResponses = {
+            "bad",
+            "sad",
+            "depressed",
+            "nervous",
+            "anxious",
+            "poor",
+            "poorly"
+    };
+
 }

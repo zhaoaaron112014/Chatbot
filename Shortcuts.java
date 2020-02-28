@@ -1,4 +1,4 @@
-public class Shortcuts extends MagpieMain{
+public class Shortcuts {
 
 
 

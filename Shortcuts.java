@@ -1,4 +1,4 @@
-public Shortcuts extends MagpieMain {
+public class Shortcuts extends MagpieMain {
   public String ShortcutsIntro() 
   {
     return "What type of shortcut would you like to use?";

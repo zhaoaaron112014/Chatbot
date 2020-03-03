@@ -41,7 +41,7 @@ public class Introductions{
         return returned;
     }
     public String greetingResponse() {
-            return "Hello! " + getRandomGreeting();
+            return  getRandomGreeting();
     }
 
     public void prompt(){

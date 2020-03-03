@@ -1,3 +1,7 @@
-public class CreateAndOpen extends MagpieMain{
+public class CreateAndOpen extends Helper{
+
+
+
+
 
 }

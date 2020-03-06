@@ -7,14 +7,14 @@ public class FilesAndFolders extends Helper{
     
     public String iAmResponse(String statement){
       for (int i = 0; i < save.length; i++) {
-            if (statement.contains(save[i])) {
-                returned = "If you would like to know how to save your document, click the Save button, and then choose where you would like to put your file";
+            if (statement.contains(create[i])) {
+                returned = "to create a new file, go to files -> new project -> next -> and then save the file where you would like to.";
 
                 return returned;
             }
 
 
-    private String[] save = {
+    private String[] create = {
             "save"
     };
       }
